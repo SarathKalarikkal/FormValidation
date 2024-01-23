@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Sign-Up/In</title>
+</head>
+<body class="dark">
+    <header>
+        <div class="container">
+            <h2 id="title">SIGN UP-IN</h2>
+            <div id="dayNight">
+                <span class="material-symbols-outlined" id="day" onclick="dayNightToggler()">light_mode</span>
+                <span id="roundBtn" class="dayNnight"></span>
+                <span class="material-symbols-outlined" id="night" onclick="dayNightToggler()"> dark_mode</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero-heading" >
+            <div class="container">
+                <h1 class="RegisterOrLogin">Register</h1>
+                <p class="registerOrLoginDesc">Welcome to our registration page.</p>
+            </div>   
+        </section>
+        <section id="form-container" >
+                <div class="container">
+                    <div class="forms-wrapper">
+                    <form action="#" class="form-1 active">
+                        <p id="form-desc">Please fill out the form below to create your account</p>
+                        <div class="fileds">
+                            <div class="name-field">
+                                <input type="text" name="first-name" id="first-name" placeholder="" required>
+                                <p id="firstNameError" class="errorMessage"></p>
+                                <label for="first-name" id="firstnameLabel">First Name</label>
+                            </div>
+                            <div class="name-field">
+                                <input type="text" name="last-name" id="last-name" placeholder="" required>
+                                <p id="lastNameError" class="errorMessage"></p>
+                                <label for="last-name" id="lastNameLabel">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="fileds">
+                            <div class="name-field">
+                                <input type="email" name="email" id="email" placeholder="" required>
+                                <p id="emailError" class="errorMessage"></p>
+                                <label for="email" id="emailLabel">Email</label>
+                            </div>
+                        </div>
+                        <div class="fileds">
+                            <div class="name-field">
+                                <input type="password" name="password" id="password" placeholder="" required >
+                                <p id="passwordError" class="errorMessage"></p>
+                                <span class="material-symbols-outlined eyeCloseBtn" id="eyeClose" >visibility_off</span>
+                                <label for="password" id="passwordLabel">Password</label>
+                            </div>
+                        </div>
+                        <div class="fileds">
+                            <div class="name-field">
+                                <input type="password" name="confirm-password" id="confirm-password"  placeholder="" required>
+                                <p id="corfirmPasswordError" class="errorMessage"></p>
+                                <label for="confirm-password" id="confirmPasswordLabel">Confirm Password</label>
+                            </div>
+                        </div>
+                            <button id="form-btn1">Sign up</button>
+                            <p id="form-last-para">Already have an account ? <a href="#" id="login-toggler" onclick="LoginSignUpPageToggler()">Login</a></p>
+                    </form>
+                    <form action="#" class="form-2">
+                        <p id="form-desc">Please fill to Login your account</p>
+                        <div class="fileds">
+                            <div class="name-field">
+                                <input type="email" name="emailTwo" id="emailTwo" placeholder="" required>
+                                <p id="loginEmailError" class="errorMessage"></p>
+                                <label for="emailTwo" id="loginEmailLabel">Email</label>
+                            </div>
+                        </div>
+                        <div class="fileds">
+                            <div class="name-field">
+                                <input type="password" name="passwordTwo" id="passwordTwo" placeholder="" required>
+                                <p id="loginPasswordError" class="errorMessage"></p>
+                                <span class="material-symbols-outlined" id="eyeClose2" >visibility_off</span>
+                                <label for="passwordTwo" id="loginPasswordLabel">Password</label>
+                            </div>
+                        </div>
+                            <button id="form-btn2">Login</button>
+                            <p id="form-last-para">Not registered yet? <a href="#" id="signUp-toggler" onclick="LoginSignUpPageToggler()">Sign-up</a></p>
+                    </form>
+                </div>
+                    <div class="underline-or">
+                        <span></span>
+                        <p>Or</p>
+                    </div>
+                    <div class="google-sign">
+                        <img src="images/Google.png" alt="">
+                        <p class="SignOrLoginGoogle">Sign up with Google</p>
+                    </div>
+                </div>   
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p id="copywrite">@2024 || Form Validation|| Developed by SK</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js">  
+    </script>
+</body>
+</html>

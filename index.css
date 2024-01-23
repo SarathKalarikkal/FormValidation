@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+section{
+    padding: 20px 0;
+}
+
+/* ------------day-night mode -------------- */
+body, .dayNight{
+    background-color: #ffffff;
+}
+body.dark{
+    background-color: #333333;
+}
+body.dark{
+    color: white;
+}
+body.dark .name-field input{
+    color: white;
+}
+body.dark .underline-or p{
+    background-color: #333333;
+}
+body.dark #day, #night{
+    color: black;
+}
+
+
+::placeholder{
+    color: #333333;
+}
+
+/* ----------------------------------------------------- */
+
+#title{
+  font-weight: 600;
+  font-size:20px;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px ;
+}
+#dayNight{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.205);
+    border-radius: 25px;
+    padding: 4px 8px;
+    gap: 5px;
+    position: relative;
+}
+#day, #night{
+    font-size: 15px;
+    cursor: pointer;
+}
+#roundBtn{
+    background-color: blueviolet;
+    width: 22px;
+    height: 22px;
+    border-radius:50%;
+    position: absolute;
+    transition: all 0.3s ease;
+    transform: translateX(-35%);
+}
+#roundBtn.dayNnight{
+    transform: translateX(100%);
+}
+
+
+
+#hero-heading .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.form-1{
+  width: 100%;
+  max-width: 500px;
+  padding:30px;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.form-1.active{
+    display: block;
+}
+.form-2.active{
+    display: block;
+}
+
+.form-2{
+  width: 100%;
+  max-width: 500px;
+  padding:100px 30px;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  display: none;
+}
+form #form-desc{
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+form .fileds{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px 0;
+}
+.name-field {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    background-color: none;
+    margin-top: 15px;
+}
+.errorMessage{
+    font-size: 10px;
+    color: rgb(230, 6, 6);
+    margin-top: 6px;
+    text-align: end;
+}
+
+label {
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.name-field input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+
+.name-field input:focus ~ label,
+.name-field input:not(:placeholder-shown) ~ label {
+    top: -60%;
+    left: 5px;
+    font-size: 13px;
+    color: rgb(164, 80, 243); 
+}
+
+.name-field input:focus {
+    border: 1px solid blueviolet;
+}
+.name-field #eyeClose, #eyeClose2 {
+    position: absolute;
+    top: 26%;
+    right: 17px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#form-btn1,#form-btn2 {
+    width: 100%;
+    margin: 0 auto;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+#form-btn1:hover,#form-btn2:hover {
+    background-color: rgb(164, 80, 243);
+}
+form #form-last-para{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+form #form-last-para a{
+  color: rgb(164, 80, 243);
+}
+ .underline-or{
+ position: relative;
+ margin-top: 1.5rem;
+}
+
+.underline-or p{
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    padding: 7px;
+    font-size: 12px;
+    background-color: white;
+}
+
+.google-sign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+     max-width: 500px;
+     padding: 10px ;
+     margin-top: 1rem;
+     border: 1px solid grey;
+     border-radius: 8px;
+     margin-left: auto;
+     margin-right: auto;
+     cursor: pointer;
+}
+
+.google-sign img{
+    width:10%;
+}
+#copywrite{
+    text-align: center;
+    font-size: 13px;
+}
+
+
+
+
+
+
+/* Styles for screens between 576px and 767.98px (Small devices) */
+@media (min-width: 576px){
+    /* Your styles for small screens go here */
+    form .fileds {
+        flex-direction: row;
+    }
+
+}
+
+/* Styles for screens between 768px and 991.98px (Medium devices) */
+@media (min-width: 768px){
+    /* Your styles for medium screens go here */
+    form .fileds {
+        flex-direction: row;
+    }
+    form #form-last-para {
+        font-size: 15px;
+    }
+
+}
+
+/* Styles for screens between 992px and 1199.98px (Large devices) */
+@media (min-width: 992px) {
+    /* Your styles for large screens go here */
+    .form-1, .form-2, .google-sign{
+        max-width: 577px;
+    }
+    form #form-desc {
+        font-size: 14px;
+    }
+    .errorMessage {
+        font-size: 14px;
+    }
+    form #form-last-para {
+        font-size: 17px;
+    }
+}
+
+/* Styles for screens 1200px and larger (Extra Large devices) */
+@media (min-width: 1200px) {
+    /* Your styles for extra large screens go here */
+}
